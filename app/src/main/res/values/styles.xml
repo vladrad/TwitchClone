@@ -1,0 +1,55 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:actionMenuTextColor">@color/white</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+
+    <!--For Text Styles in App -->
+
+    <!--Channels and Games lists -->
+    <style name="BaseListFontParent">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="StreamTitle" parent="BaseListFontParent">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="PlayingFor" parent="BaseListFontParent">
+        <item name="android:textColor">@color/play_for_color</item>
+        <item name="android:ellipsize">middle</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="PastBroadcast" parent="BaseListFontParent">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+
+    <!-- Page tile -->
+    <style name="PageTitle" parent="BaseListFontParent">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/game_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.view.PagerTabStrip
+            android:background="@color/colorPrimary"
+            android:id="@+id/pager_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/forty_five_dp"
+            android:layout_gravity="top"
+            style="@style/PageTitle"
+            />
+
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="@dimen/channel_height_land"
+    android:layout_height="@dimen/channel_width_land"
+    android:background="@android:color/black"
+    android:layout_marginBottom="@dimen/five_dp"
+    android:layout_marginTop="10dp"
+    >
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/stream_preview"
+        android:layout_width="match_parent"
+        android:background="@android:color/black"
+        android:layout_height="@dimen/channel_height" />
+
+
+    <LinearLayout
+        android:background="@drawable/box_gradient"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="@dimen/channel_info_height"
+        android:paddingBottom="@dimen/five_dp"
+        android:paddingLeft="@dimen/five_dp"
+        android:paddingRight="@dimen/five_dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            style="@style/BaseListFontParent"
+            android:id="@+id/past_broadcast"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twenty_dp"
+            />
+        <TextView
+            style="@style/StreamTitle"
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twenty_five_dp"
+            />
+        <TextView
+            style="@style/PlayingFor"
+            android:id="@+id/playing_for"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twenty_dp"
+            android:layout_marginBottom="@dimen/five_dp"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

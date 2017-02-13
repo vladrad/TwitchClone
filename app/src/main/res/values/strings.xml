@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Clone</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="games">Games</string>
+    <string name="channels">Channels</string>
+
+
+
+    <!-- Channel uploadedFrom for -->
+    <string name="playing_for_single">Playing <![CDATA[ <b>%1$s</b> ]]> for <![CDATA[ <b>%2$s</b> ]]> viewers</string> <!-- For ever lonely streamer like my self -->
+    <string name="playing_for_multi">Playing <![CDATA[ <b>%1$s</b> ]]> for <![CDATA[ <b>%2$s</b> ]]> viewers</string>
+
+
+    <!-- Archive uploadedFrom for -->
+    <string name="past_broadcast"><![CDATA[ <b>Past broadcast</b> ]]> from <![CDATA[ <b>%1$s</b> ]]></string>
+    <string name="view_length"><![CDATA[ <b>%1$s</b> ]]> views | <![CDATA[ <b>%2$s</b> ]]></string>
+    <string name="upload_from"><![CDATA[ <b>Uploaded</b> ]]> from <![CDATA[ <b>%1$s</b> ]]></string>
+
+    <!-- Game Directory navigation -->
+    <string-array name="game_directory">
+        <item>Live Channels</item>
+        <item>Past Broadcasts</item>
+        <item>Uploads</item>
+    </string-array>
+
+    <!-- Game Directory navigation -->
+    <string-array name="days_of_week">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+
+
+</resources>

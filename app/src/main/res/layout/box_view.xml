@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:background="@android:color/black"
+    android:layout_height="@dimen/two_hundred_dp">
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/box_image"
+        android:layout_width="@dimen/two_hundred_dp"
+        android:layout_height="@dimen/game_box_height" />
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/box_gradient"
+        android:layout_width="@dimen/two_hundred_dp"
+        android:layout_height="@dimen/game_box_gradient_height"/>
+
+    <TextView
+        style="@style/BaseListFontParent"
+        android:id="@+id/box_text"
+        android:layout_width="@dimen/two_hundred_dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/ten_dp"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

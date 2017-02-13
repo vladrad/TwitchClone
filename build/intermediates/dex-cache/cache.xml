@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/Vladi/Downloads/MyApplication/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="11ae37fe697faa269b3cb27935fcf5f963ddc517">
+        <dex dex="/Users/Vladi/Downloads/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f8e3910e009f771d69454f06170dbb35da85689f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Vladi/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/Vladi/Downloads/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_ad270f5ec5d770d57f946342ab5e35850f20e480/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Vladi/.gradle/caches/modules-2/files-2.1/org.greenrobot/eventbus/3.0.0/ddd99896e9569eaababbe81b35d80e1b91c4ad85/eventbus-3.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
+        <dex dex="/Users/Vladi/Downloads/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/eventbus-3.0.0_ba527f5c3c2535801db8d8465b294e2f24fbfc52/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Vladi/Downloads/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="/Users/Vladi/Downloads/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.1.0_40c81c93668d4f21cbaf54354eeaee181ebeac7b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Vladi/Downloads/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="/Users/Vladi/Downloads/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.1.0_ad81b4af74ee101ed53fe05112470202e58d8ec9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Vladi/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="/Users/Vladi/Downloads/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.1.0_8d20eb2c75f3a35c687640e7db37db1b3827f7d8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Vladi/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/Users/Vladi/Downloads/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.7_011f87e21d70d4ddd2924d4601ce4a442875d1c5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Vladi/Downloads/MyApplication/app/build/intermediates/exploded-aar/com.android.support/design/23.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="8a5238e4bdcd6568b82db669d41817de670586b8">
+        <dex dex="/Users/Vladi/Downloads/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.0.0_acf3e45edfc9be95caf3829e7f8808ccee7ceccd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Vladi/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="/Users/Vladi/Downloads/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.1.0_78e93d35828bf8190889378c597d4c49b4000c54/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Vladi/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.3.0/2b802460eea20f8f2ad9c08c74e0f14718e88aa9/okhttp-3.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
+        <dex dex="/Users/Vladi/Downloads/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.3.0_7ed236e690a029b25dd0f138382cc04cf0332df5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Vladi/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/2de7cd8b95b7021b1d597f049bcb422055119f2c/retrofit-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="/Users/Vladi/Downloads/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit-2.1.0_0b10c64efe1c0426ccb462b8f2af1d2570d91c56/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Vladi/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.8.0/5ea7af56cc7c567ed9856d99efb30740e9b17ff/okio-1.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="/Users/Vladi/Downloads/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.8.0_f1877eae629a3dd744ae1cfb6e3271be49ac0ede/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Vladi/Downloads/MyApplication/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="9bb853535b3b9d1442dfc1b87c40b0967e6018f4">
+        <dex dex="/Users/Vladi/Downloads/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_7fb7088952df60de5a4bad26e8b46a945d1f879e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Vladi/Downloads/MyApplication/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
+        <dex dex="/Users/Vladi/Downloads/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.0.0_2016d6087b3417eba1cfb7ffe19bddd7b74c39d1/classes.dex" />
+    </item>
+
+</items>

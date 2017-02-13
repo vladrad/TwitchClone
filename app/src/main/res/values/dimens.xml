@@ -1,0 +1,42 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+    <!-- Default DP size -->
+    <dimen name="five_dp">5dp</dimen>
+    <dimen name="ten_dp">10dp</dimen>
+    <dimen name="fifteen_dp">15dp</dimen>
+    <dimen name="twenty_dp">20dp</dimen>
+    <dimen name="twenty_five_dp">25dp</dimen>
+    <dimen name="thirty_five_dp">35dp</dimen>
+    <dimen name="forty_five_dp">45dp</dimen>
+    <dimen name="two_hundred_dp">200dp</dimen>
+
+
+    <!-- Nav top padding -->
+    <dimen name="nav_top">50dp</dimen>
+    <dimen name="nav_width">80dp</dimen>
+
+    <!-- Game Grid View -->
+    <dimen name="game_column_width">180dp</dimen>
+
+    <!--Game box view -->
+    <dimen name="game_box_height">260dp</dimen>
+    <dimen name="game_box_gradient_height">40dp</dimen>
+
+    <!-- Channel height -->
+    <dimen name="channel_height">225dp</dimen>
+    <dimen name="channel_info_height">70dp</dimen>
+
+    <!-- Channel height land -->
+    <dimen name="channel_height_land">300dp</dimen>
+    <dimen name="channel_width_land">180dp</dimen>
+
+
+</resources>

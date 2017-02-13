@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item>
+        <menu>
+            <group
+                android:id="@+id/group"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/games_menu"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="@string/games" />
+                <item
+                    android:id="@+id/channels_menu"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="@string/channels" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

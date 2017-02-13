@@ -36,10 +36,10 @@ started to lose steam. <br />
 
 #Code Clean Up
 Half way through the app I realized how many of the views were shared and a lot of the classes can be condensed.
-< br/>
+<br />
 Example: Both UploadAdapter and ArchiveAdapter are similar. Both Archive View and Upload View are practically
-the same and can be condensed. < br/>
+the same and can be condensed. <br />
 I should probably use a gesture detector when doing the on click animations so the on click handler can work
-better. Currently its all in the adapter. < br/>
-Unit tests would be awesome < br/>
-Sooooo much more ... < br/>
+better. Currently its all in the adapter. <br />
+Unit tests would be awesome <br />
+Sooooo much more ... <br />

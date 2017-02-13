@@ -24,7 +24,22 @@ Events are fired and sent to the navigation controller which will load the appro
 The TwitchService handles all the http requets and sends out events when they are done.<br />
 
 #Whats missing?
-A lot!!!!! <br />
+A lot!!!!! Here are some obvious things... <br />
 There is currently no error handling for the TwitchService!<br />
-I am not tracking <br />
+While landscape mode works, I am not checking if the fragments are already created. When the app is turned it 
+restarts in game channel. Bassically a full restart.<br />
+The whole video streaming is not in the app. I have worked with rtpm and rtsp at my old job at Netpulse. We
+would host our videos on a local server in the gyms where we would stream videos to our android devices. <br />
+Chat is missing... I was looking at the chat specs. I was searching for some IRC libraries to connect to it but 
+started to lose steam. <br />
 
+
+#Code Clean Up
+Half way through the app I realized how many of the views were shared and a lot of the classes can be condensed.
+< br/>
+Example: Both UploadAdapter and ArchiveAdapter are similar. Both Archive View and Upload View are practically
+the same and can be condensed. < br/>
+I should probably use a gesture detector when doing the on click animations so the on click handler can work
+better. Currently its all in the adapter. < br/>
+Unit tests would be awesome < br/>
+Sooooo much more ... < br/>

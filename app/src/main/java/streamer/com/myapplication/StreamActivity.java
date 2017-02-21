@@ -4,6 +4,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.MediaController;
 import android.widget.VideoView;
@@ -15,7 +16,6 @@ import org.jibble.pircbot.PircBot;
 
 
 import java.io.IOException;
-import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -32,7 +32,7 @@ public class StreamActivity extends AppCompatActivity {
     private VideoView videoStream;
     private MediaController videoController;
     private Thread chatThread;
-    private MyBot chatClient;
+    private ChatClient chatClient;
     private ListView chatView;
     private ChatAdapter chatAdapter;
 
@@ -48,6 +48,8 @@ public class StreamActivity extends AppCompatActivity {
         videoStream = (VideoView) findViewById(R.id.video_stream);
         videoController = new MediaController(this);
         TwitchService.get().getAccessToken(CurrentStream.get().currentChannel);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setTitle(CurrentStream.get().currentChannel.toUpperCase());
         EventBus.getDefault().register(this);
     }
 
@@ -93,12 +95,19 @@ public class StreamActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        finish();
+        return super.onOptionsItemSelected(item);
+    }
+
+
 
     public void setUpChat(){
         chatThread = new Thread(new Runnable() {
             @Override
             public void run() {
-                chatClient = new MyBot();
+                chatClient = new ChatClient();
                 // Enable debugging output.
                 chatClient.setVerbose(true);
                 // Connect to the IRC server.
@@ -116,25 +125,12 @@ public class StreamActivity extends AppCompatActivity {
 
         chatThread.start();
 
-        Timer timer = new Timer();
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        chatAdapter.notifyDataSetChanged();
-                    }
-                });
-            }
-        },0,1000);
-
     }
 
 
-    public class MyBot extends PircBot {
+    public class ChatClient extends PircBot {
 
-        public MyBot() {
+        public ChatClient() {
             this.setName("Vladmeerkat");
         }
         @Override
@@ -149,7 +145,6 @@ public class StreamActivity extends AppCompatActivity {
                     }
                 });
         }
-
     }
 
 

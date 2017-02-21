@@ -39,6 +39,5 @@ public class ChatAdapter extends ListBaseAdapter<String> {
 
     public void addMessage(String message){
         getList().add(message);
-//        notifyDataSetChanged();
     }
 }

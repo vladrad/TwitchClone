@@ -1,3 +1,14 @@
+# Update #1 - Video + Chat 2/22/17
+![Alt text](https://media.giphy.com/media/26BGJp8Sx4Ex6xPck/source.gif “Video”)<br />
+I spent time yesterday sniffing traffic on Charles to see how video links are generated in the Twitch App.<br />
+In order to get the current stream there are two http requests that you need to do: <br />
+In Charles I noticed the Twitch app was doing a request to https://api.twitch.tv/api/channels/{channel}/access_token. 
+This will return a couple of fields, a token (a giant json string), and a sig (String). This is where the confusion came in, I was looking for rtpm links but twitch uses m3u8 links.
+After looking at Charles for a bit I noticed calls to 
+
+
+
+
 # TwitchClone
 This is a example of a Android app that uses the twitch api's to create the same flow as the offical App.<br />
 You can check out the stream here https://www.twitch.tv/vladmeerkat/videos/all

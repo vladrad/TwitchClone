@@ -31,10 +31,10 @@ public interface Api {
     @GET("videos/top?limit=25&offset=0&broadcast_type=upload")
     Call<Videos> searchUploaded(@Query("game") String game);
 
-    @GET("https://api.twitch.tv/api/channels/{channel}/access_token")
+    @GET("/channels/{channel}/access_token")
     Call<Access> getAccessToken(@Path("channel") String channel);
 
-    @GET("http://usher.twitch.tv/api/channel/hls/{channel}.m3u8?&allow_spectre=true&max_level=42")
+    @GET("api/channel/hls/{channel}.m3u8")
     Call<String> getM3U8Links(@Path("channel") String channel,@Query("allow_spectre") boolean spectre, @Query("max_level") long level, @Query("token") String token, @Query("sig") String sig);
 
 }

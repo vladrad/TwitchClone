@@ -1,5 +1,5 @@
 # Update #1 - Video + Chat 2/22/17
-<iframe src="//giphy.com/embed/xTiN0IWEpaTPNDkPlK" width="480" height="722" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/xTiN0IWEpaTPNDkPlK">via GIPHY</a> <br />
+![](http://i.giphy.com/l44Q9gYXbc04GGsUM.gif) <br />
 I spent time yesterday sniffing traffic on Charles to see how video links are generated in the Twitch App.<br />
 In order to get the current stream there are two http requests that you need to do: <br />
 In Charles I noticed the Twitch app was doing a request to https://api.twitch.tv/api/channels/{channel}/access_token. 

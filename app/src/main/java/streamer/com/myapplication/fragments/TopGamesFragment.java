@@ -8,11 +8,14 @@ import android.widget.GridView;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
+
 import java.util.Arrays;
+
 import streamer.com.myapplication.R;
 import streamer.com.myapplication.http.models.games.TopGame;
 import streamer.com.myapplication.services.TwitchService;
 import streamer.com.myapplication.views.adapters.TopGameAdapter;
+
 import static streamer.com.myapplication.services.TwitchService.TwitchServiceEvent.TOP_GAMES_EVENT;
 
 /**
@@ -34,14 +37,14 @@ public class TopGamesFragment extends BaseEventFragment {
 
 
     @Override
-    public void onStart(){
+    public void onStart() {
         super.onStart();
         TwitchService.get().getTopGames();
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(TwitchService.TwitchEvent twitchEvent) {
-        if(twitchEvent.event.equals(TOP_GAMES_EVENT)){// wait for event
+        if (twitchEvent.event.equals(TOP_GAMES_EVENT)) {// wait for event
             TopGame[] topGames = TwitchService.get().getCurrentTopGames();
             TopGameAdapter topGameAdapter = new TopGameAdapter();
             topGameAdapter.setList(Arrays.asList(topGames));

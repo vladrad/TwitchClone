@@ -38,18 +38,18 @@ public class StreamsFragment extends BaseEventFragment {
     }
 
     @Override
-    public void onStart(){
+    public void onStart() {
         super.onStart();
         doHttpRequest();
     }
 
-    protected void doHttpRequest(){
+    protected void doHttpRequest() {
         TwitchService.get().getTopStreams();
     } // getApi the top streams
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(TwitchService.TwitchEvent twitchEvent) {
-        if(twitchEvent.event.equals(TOP_STREAMS_EVENT)){ // wait for event
+        if (twitchEvent.event.equals(TOP_STREAMS_EVENT)) { // wait for event
             Stream[] streams = TwitchService.get().getCurrentTopStreams();
             StreamAdapter topStreamAdapter = new StreamAdapter();
             topStreamAdapter.setList(Arrays.asList(streams));

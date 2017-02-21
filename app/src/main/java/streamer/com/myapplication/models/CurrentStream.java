@@ -9,13 +9,11 @@ public class CurrentStream {
     public String currentChannel;
     public static CurrentStream instance;
 
-    public static CurrentStream get(){
-        if(instance == null){
+    public static CurrentStream get() {
+        if (instance == null) {
             instance = new CurrentStream();
         }
         return instance;
     }
-
-
 
 }

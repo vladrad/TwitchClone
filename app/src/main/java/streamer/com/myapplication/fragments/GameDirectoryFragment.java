@@ -45,21 +45,21 @@ public class GameDirectoryFragment extends BaseEventFragment {
     }
 
     @Override
-    public void onStart(){
+    public void onStart() {
         super.onStart();
         TwitchService.get().getTopStreams();
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(TwitchService.TwitchEvent twitchEvent) { // wait for event and then do view pager
-        if(twitchEvent.event.equals(TOP_STREAMS_EVENT)){
+        if (twitchEvent.event.equals(TOP_STREAMS_EVENT)) {
             Stream[] streams = TwitchService.get().getCurrentTopStreams();
             StreamAdapter topStreamAdapter = new StreamAdapter();
             topStreamAdapter.setList(Arrays.asList(streams));
         }
     }
 
-    public void setGame(String game){
+    public void setGame(String game) {
         this.game = game;
     }
 

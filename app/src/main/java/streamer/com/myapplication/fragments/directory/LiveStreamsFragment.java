@@ -20,13 +20,13 @@ import static streamer.com.myapplication.services.TwitchService.TwitchServiceEve
 public class LiveStreamsFragment extends StreamsFragment {
 
     @Override
-    protected void doHttpRequest(){
+    protected void doHttpRequest() {
         TwitchService.get().searchLiveStreams(game);
     } // search top games
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(TwitchService.TwitchEvent twitchEvent) { // search uploaded
-        if(twitchEvent.event.equals(TOP_SEARCH_STREAM_EVENT)){
+        if (twitchEvent.event.equals(TOP_SEARCH_STREAM_EVENT)) {
             Stream[] streams = TwitchService.get().getTopSearchStreams();
             StreamAdapter topStreamAdapter = new StreamAdapter();
             topStreamAdapter.setList(Arrays.asList(streams));

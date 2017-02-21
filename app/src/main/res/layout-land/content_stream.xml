@@ -17,15 +17,15 @@
 
     <RelativeLayout
         android:id="@+id/chat_holder"
-        android:layout_below="@id/video_stream"
         android:layout_width="match_parent"
-        android:visibility="gone"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@id/video_stream"
+        android:visibility="gone">
+
         <ListView
             android:id="@+id/chat_list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </ListView>
+            android:layout_height="match_parent" />
     </RelativeLayout>
 
 </RelativeLayout>

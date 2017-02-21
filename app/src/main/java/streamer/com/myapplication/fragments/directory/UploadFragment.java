@@ -20,13 +20,13 @@ public class UploadFragment extends StreamsFragment {
 
 
     @Override
-    protected void doHttpRequest(){
+    protected void doHttpRequest() {
         TwitchService.get().searchTopUploads(game);
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(TwitchService.TwitchEvent twitchEvent) {
-        if(twitchEvent.event.equals(TOP_UPLOAD_EVENTS)){
+        if (twitchEvent.event.equals(TOP_UPLOAD_EVENTS)) {
             Video[] videos = TwitchService.get().getTopUploadedStreams();
             UploadAdapter uploadAdapter = new UploadAdapter();
             uploadAdapter.setList(Arrays.asList(videos));

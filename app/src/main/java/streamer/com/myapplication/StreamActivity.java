@@ -16,8 +16,6 @@ import org.jibble.pircbot.PircBot;
 
 
 import java.io.IOException;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import streamer.com.myapplication.models.CurrentStream;
 import streamer.com.myapplication.services.TwitchService;
@@ -42,25 +40,25 @@ public class StreamActivity extends AppCompatActivity {
         setContentView(R.layout.activity_stream);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        chatView = (ListView) findViewById(R.id.chat_list);
-        chatAdapter = new ChatAdapter();
-        chatView.setAdapter(chatAdapter);
+        chatView = (ListView) findViewById(R.id.chat_list); //grab chat list
+        chatAdapter = new ChatAdapter(); // do adapter
+        chatView.setAdapter(chatAdapter); // set adapter
         videoStream = (VideoView) findViewById(R.id.video_stream);
-        videoController = new MediaController(this);
-        TwitchService.get().getAccessToken(CurrentStream.get().currentChannel);
+        videoController = new MediaController(this); //create new controller
+        TwitchService.get().getAccessToken(CurrentStream.get().currentChannel); //grab a token for the current channel
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle(CurrentStream.get().currentChannel.toUpperCase());
         EventBus.getDefault().register(this);
     }
 
     @Override
-    public void onStart(){
+    public void onStart() {
         super.onStart();
         setUpChat();
     }
 
     @Override
-    public void onStop(){
+    public void onStop() {
         super.onStop();
         EventBus.getDefault().unregister(this);
         try {
@@ -73,16 +71,15 @@ public class StreamActivity extends AppCompatActivity {
     }
 
 
-
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(TwitchService.TwitchEvent twitchEvent) { // grab access for token
-        if(twitchEvent.event.equals(GET_ACCESS)){ // getApi token
+        if (twitchEvent.event.equals(GET_ACCESS)) { // getApi token
             String token = TwitchService.get().getAccess().getToken();
             String sig = TwitchService.get().getAccess().getSig();
             String channel = CurrentStream.get().currentChannel;
-            TwitchService.get().getM3U8links(channel,token,sig); //getApi m3u8 links
+            TwitchService.get().getM3U8links(channel, token, sig); //getApi m3u8 links
         }
-        if(twitchEvent.event.equals(GET_M3U8)){ // got playlist now process
+        if (twitchEvent.event.equals(GET_M3U8)) { // got playlist now process
             videoStream.setMediaController(videoController);
             final String streamLink = M3U8Parse.getFirstLink(TwitchService.get().getM3u8());
             runOnUiThread(new Runnable() {
@@ -102,8 +99,7 @@ public class StreamActivity extends AppCompatActivity {
     }
 
 
-
-    public void setUpChat(){
+    public void setUpChat() {
         chatThread = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -112,42 +108,39 @@ public class StreamActivity extends AppCompatActivity {
                 chatClient.setVerbose(true);
                 // Connect to the IRC server.
                 try {
-                    chatClient.connect("irc.chat.twitch.tv",6667,"oauth:kd1m645aizep2kavciwe4b5mrz2tgn"); //pre generated auth token
+                    chatClient.connect("irc.chat.twitch.tv", 6667, "oauth:kd1m645aizep2kavciwe4b5mrz2tgn"); //pre generated auth token from twitch app, and I knew the chat server
                 } catch (IOException e) {
                     e.printStackTrace();
                 } catch (org.jibble.pircbot.IrcException e) {
                     e.printStackTrace();
                 }
                 // Join the #pircbot channel.
-                chatClient.joinChannel("#"+CurrentStream.get().currentChannel);
+                chatClient.joinChannel("#" + CurrentStream.get().currentChannel); //time to join our channel
             }
         });
-
         chatThread.start();
 
     }
 
-
     public class ChatClient extends PircBot {
 
         public ChatClient() {
-            this.setName("Vladmeerkat");
+            this.setName("Vladmeerkat"); //this would be my nick name
         }
+
         @Override
         public void onMessage(String channel, final String sender,
                               String login, String hostname, final String message) {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        chatAdapter.addMessage(sender +": " + message);
-                        chatAdapter.notifyDataSetChanged();
-                        chatView.setSelection(chatAdapter.getCount() - 1);
-                    }
-                });
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    chatAdapter.addMessage(sender + ": " + message); // set the message
+                    chatAdapter.notifyDataSetChanged();// notify data set is changed
+                    chatView.setSelection(chatAdapter.getCount() - 1); //keep the scroll going to the bottom
+                }
+            });
         }
     }
-
-
 
 
 }

@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class Videos {
 
-    @SerializedName("vods") // with android token from charles, seems to get more info on this api
+    @SerializedName("vods") // with android token from charles, seems to getApi more info on this api
     private Video[] videos;
 
     public Video[] getVideos() {

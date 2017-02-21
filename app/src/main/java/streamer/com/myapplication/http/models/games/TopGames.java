@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class TopGames {
-    @SerializedName("top") //get top games
+    @SerializedName("top") //getApi top games
     private TopGame[] games; // creates the game objects
 
     public TopGame[] getGames() {

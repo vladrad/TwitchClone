@@ -20,7 +20,7 @@ public class UploadAdapter extends ListBaseAdapter<Video> {
             convertView = new UploadView(parent.getContext()); // create new stream view
         }
 
-        Video video = getItem(position); // get stream in list
+        Video video = getItem(position); // getApi stream in list
         ((UploadView) convertView).setVideo(video); //set the stream
         final View view = convertView;
         view.setOnTouchListener(new OnScaleTouchListener(view,convertView.getContext())); //scale on touch listener

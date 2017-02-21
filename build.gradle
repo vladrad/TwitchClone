@@ -2,6 +2,8 @@
 
 buildscript {
     repositories {
+        maven { url "https://mvnrepository.com/artifact/pircbot/pircbot"}
+        mavenCentral()
         jcenter()
     }
     dependencies {
@@ -14,6 +16,8 @@ buildscript {
 
 allprojects {
     repositories {
+        maven { url "https://mvnrepository.com/artifact/pircbot/pircbot"}
+        mavenCentral()
         jcenter()
     }
 }

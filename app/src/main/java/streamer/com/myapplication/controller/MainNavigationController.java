@@ -1,5 +1,6 @@
 package streamer.com.myapplication.controller;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 
@@ -9,10 +10,11 @@ import org.greenrobot.eventbus.ThreadMode;
 
 import streamer.com.myapplication.MainActivity;
 import streamer.com.myapplication.R;
+import streamer.com.myapplication.StreamActivity;
 import streamer.com.myapplication.fragments.GameDirectoryFragment;
 import streamer.com.myapplication.fragments.TopGamesFragment;
 import streamer.com.myapplication.fragments.StreamsFragment;
-
+import streamer.com.myapplication.models.CurrentStream;
 
 
 /**
@@ -28,11 +30,12 @@ public class MainNavigationController {
     private GameDirectoryFragment gameDirectoryFragment;
 
 
-    public enum  Navigation {GAME_DIRECTORY}
+    public enum  Navigation {GAME_DIRECTORY,STREAM_ACTIVITY}
 
     public static class NavigationEvent{ // our navigation event
         public Navigation navigation;
         public String game;
+        public String channel;
     }
 
     public MainNavigationController(MainActivity context){
@@ -82,8 +85,11 @@ public class MainNavigationController {
             gameDirectoryFragment = new GameDirectoryFragment();
             gameDirectoryFragment.setGame(navigationEvent.game);
             loadFragment(gameDirectoryFragment);
+        } else if (navigationEvent.navigation.equals(Navigation.STREAM_ACTIVITY)){ //handle launch stream activity
+            CurrentStream.get().currentChannel = navigationEvent.channel;
+            Intent steamActivity = new Intent(activity.getApplicationContext(), StreamActivity.class);
+            activity.startActivity(steamActivity);
         }
     }
-
 
 }

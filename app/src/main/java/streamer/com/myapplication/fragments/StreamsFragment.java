@@ -45,7 +45,7 @@ public class StreamsFragment extends BaseEventFragment {
 
     protected void doHttpRequest(){
         TwitchService.get().getTopStreams();
-    } // get the top streams
+    } // getApi the top streams
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(TwitchService.TwitchEvent twitchEvent) {

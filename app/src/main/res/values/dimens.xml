@@ -38,5 +38,8 @@
     <dimen name="channel_height_land">300dp</dimen>
     <dimen name="channel_width_land">180dp</dimen>
 
+    <!-- Video -->
+    <dimen name="video_height">225dp</dimen>
+
 
 </resources>

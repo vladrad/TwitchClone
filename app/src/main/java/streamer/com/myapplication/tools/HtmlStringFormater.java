@@ -65,9 +65,9 @@ public class HtmlStringFormater { // used to format thin text
     //from stack overflow
     private static String formatSeconds(long timeInSeconds) { // have written something for the Gigwalk app, its very similar here
         long hours = timeInSeconds / 3600; // convert hours
-        long secondsLeft = timeInSeconds - hours * 3600; // get how many seconds left
-        long minutes = secondsLeft / 60; // get minutes
-        long seconds = secondsLeft - minutes * 60; // get seconds
+        long secondsLeft = timeInSeconds - hours * 3600; // getApi how many seconds left
+        long minutes = secondsLeft / 60; // getApi minutes
+        long seconds = secondsLeft - minutes * 60; // getApi seconds
 
         String formattedTime = ""; // because it a long we need to check for trailing 0 eg. 01 not 1
         if (hours < 10)

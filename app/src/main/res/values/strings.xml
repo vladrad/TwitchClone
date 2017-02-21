@@ -9,7 +9,6 @@
     <string name="channels">Channels</string>
 
 
-
     <!-- Channel uploadedFrom for -->
     <string name="playing_for_single">Playing <![CDATA[ <b>%1$s</b> ]]> for <![CDATA[ <b>%2$s</b> ]]> viewers</string> <!-- For ever lonely streamer like my self -->
     <string name="playing_for_multi">Playing <![CDATA[ <b>%1$s</b> ]]> for <![CDATA[ <b>%2$s</b> ]]> viewers</string>
@@ -37,6 +36,7 @@
         <item>Saturday</item>
         <item>Sunday</item>
     </string-array>
+    <string name="title_activity_stream">StreamActivity</string>
 
 
 </resources>
